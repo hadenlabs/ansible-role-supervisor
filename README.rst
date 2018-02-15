@@ -3,7 +3,7 @@ Ansible Role Supervisor
 
 |Build Status| |Ansible Galaxy| |GitHub issues| |Average time to resolve an issue| |Percentage of issues still open| |GitHub license|
 
-:Version: 0.0.0
+:Version: 0.1.0
 :Web: https://github.com/hadenlabs/ansible-role-supervisor
 :Download: http://github.com/hadenlabs/ansible-role-supervisor
 :Source: http://github.com/hadenlabs/ansible-role-supervisor
