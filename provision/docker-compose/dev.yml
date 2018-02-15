@@ -1,0 +1,32 @@
+# Docker Compose
+# https://docs.docker.com/compose/
+
+version: '3'
+services:
+
+  # Django web server.
+  web:
+    image: ansible-role-supervisor-dev:1.0.0
+    ports:
+      - "8000:8000"
+      - "8080:5000"
+    environment: &environment
+      - ENVIRONMENT=local
+    build:
+      context: .
+      dockerfile: provision/docker/web/Dockerfile
+    volumes:
+      - .:/usr/src
+    env_file:
+      - .env
+
+  check:
+    image: check-ansible-role-supervisor-dev:1.0.0
+    environment: *environment
+    build:
+      context: .
+      dockerfile: provision/docker/check/Dockerfile
+    volumes:
+      - .:/usr/src
+    env_file:
+      - .env
