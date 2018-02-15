@@ -1,0 +1,12 @@
+# Docker Compose
+# https://docs.docker.com/compose/
+# Usage: docker-compose up
+
+version: '3'
+services:
+
+  # web server.
+  web:
+    restart: always
+    environment: &environment
+      - ENVIRONMENT=local
