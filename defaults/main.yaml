@@ -1,7 +1,7 @@
 ---
 # defaults file for supervisor
 # example values
-
+supervisor_user: "{{user}}"
 supervisor_path_apps: "/home/{{user}}/supervisor"
 
 # supervisor_apps:

@@ -11,4 +11,4 @@ _supervisor_create_files:
   - path: "{{ supervisor_path_apps }}"
     state: "directory"
     # group: "root"
-    owner: "{{ user }}"
+    owner: "{{ supervisor_user }}"
