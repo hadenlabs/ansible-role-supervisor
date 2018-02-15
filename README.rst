@@ -39,6 +39,8 @@ The default role variables in ``defaults/main.yml`` are:
 
 .. code-block:: yaml
 
+    supervisor_user: {{user}}
+
     # defaults file for supervisor
     supervisor_apps:
       - program: name
@@ -74,9 +76,9 @@ this:
 
 .. code:: yaml
 
-        - hosts: servers
-          roles:
-            - hadenlabs.supervisor
+    - hosts: servers
+        roles:
+        - hadenlabs.supervisor
 
 License
 =======
