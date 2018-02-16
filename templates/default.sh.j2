@@ -11,5 +11,5 @@ cd {{ item.application_path }}
 {% endif %}
 
 {% if item.execution is defined %}
-exec {{ item.execution }}
+    {{ item.execution|indent(4) }}
 {% endif %}
