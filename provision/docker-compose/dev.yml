@@ -6,10 +6,9 @@ services:
 
   # Django web server.
   web:
-    image: ansible-role-supervisor-dev:1.0.0
+    image: ansible-role-supervisor-web-dev:1.0.0
     ports:
       - "8000:8000"
-      - "8080:5000"
     environment: &environment
       - ENVIRONMENT=local
     build:
@@ -21,7 +20,7 @@ services:
       - .env
 
   check:
-    image: check-ansible-role-supervisor-dev:1.0.0
+    image: ansible-role-supervisor-check-dev:1.0.0
     environment: *environment
     build:
       context: .
