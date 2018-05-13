@@ -9,9 +9,6 @@ OS := $(shell uname)
 .DEFAULT_GOAL := help
 
 PROJECT := ansible-role-supervisor
-PROJECT_DEV := $(PROJECT)_dev
-PROJECT_STAGE := $(PROJECT)_stage
-PROJECT_TEST := $(PROJECT)_test
 PROJECT_PORT := 8000
 
 PYTHON_VERSION=3.6.1
@@ -32,7 +29,7 @@ PATH_DOCKER_COMPOSE:=provision/docker-compose
 pip_install := pip install -r
 docker-compose:=docker-compose -f docker-compose.yml
 
-include *.mk
+include extras/make/*.mk
 
 help:
 	@echo '${MESSAGE} Makefile for ${PROJECT}'
