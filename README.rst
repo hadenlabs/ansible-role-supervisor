@@ -45,7 +45,7 @@ The default role variables in ``defaults/main.yml`` are:
     supervisor_apps:
       - program: name
         application_path: /home/user/project/src
-        application_environment: {{ deployment_file_load_virtualenvwrapper }}
+        application_source_file: {{ deployment_file_load_virtualenvwrapper }}
         execution: celery -A {{ app_name }} worker --loglevel=info
 
     supervisor_programs:

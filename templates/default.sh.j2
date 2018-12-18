@@ -2,8 +2,8 @@
 
 echo "Starting {{ item.program }}"
 
-{% if item.application_environment is defined %}
-source {{ item.application_environment }}
+{% if item.application_source_file is defined %}
+source {{ item.application_source_file }}
 {% endif %}
 
 {% if item.application_path is defined %}
