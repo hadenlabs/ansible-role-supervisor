@@ -1,5 +1,7 @@
 ---
 
-- name: install supervisor using apt
+- name: Ensure supervisor is installed.
   become: true
-  apt: name=supervisor state=present update_cache=true cache_valid_time=3600
+  package:
+    name: supervisor
+    state: present
