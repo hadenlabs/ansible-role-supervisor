@@ -3,7 +3,7 @@ galaxy_info:
   author: Luis Mayta
   description: Ansible role to install supervisor
   company: HadenLabs
-  version: 0.1.2
+  version: 0.1.3
   license: Mit
   min_ansible_version: 2.0
   platforms:
@@ -86,7 +86,7 @@ galaxy_info:
   # the platforms above, uncomment those that apply to your role.
   #
   categories:
-  - system
+    - system
   #- development
 dependencies: []
   # List your role dependencies here, one per line. Only
