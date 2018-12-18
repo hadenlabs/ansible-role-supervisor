@@ -3,7 +3,7 @@ Ansible Role Supervisor
 
 |Build Status| |Ansible Galaxy| |GitHub issues| |Average time to resolve an issue| |Percentage of issues still open| |GitHub license|
 
-:Version: 0.1.2
+:Version: 0.1.3
 :Web: https://github.com/hadenlabs/ansible-role-supervisor
 :Download: http://github.com/hadenlabs/ansible-role-supervisor
 :Source: http://github.com/hadenlabs/ansible-role-supervisor
@@ -45,7 +45,7 @@ The default role variables in ``defaults/main.yml`` are:
     supervisor_apps:
       - program: name
         application_path: /home/user/project/src
-        application_environment: {{ deployment_file_load_virtualenvwrapper }}
+        application_source_file: {{ deployment_file_load_virtualenvwrapper }}
         execution: celery -A {{ app_name }} worker --loglevel=info
 
     supervisor_programs:

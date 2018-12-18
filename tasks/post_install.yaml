@@ -1,7 +1,7 @@
 ---
 
 - name: add load applications to path
-  template: src=default.sh.j2 dest={{supervisor_path_apps}}/{{ item.program }}.sh mode=0755
+  template: src=default.sh.j2 dest={{ supervisor_path_apps }}/{{ item.program }}.sh mode=0755
   with_items: "{{ supervisor_apps | default([]) }}"
   when:
     - disabled_program is defined and item.program != "{{ disabled_program }}"
