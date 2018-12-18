@@ -10,7 +10,7 @@ root: <%= ENV["PROJECTS"] %>/ansible/roles/ansible-role-supervisor
 # Project hooks
 
 # Runs on project start, always
-on_project_start: make environment
+on_project_start: make stage
 
 # Run on project start, the first time
 # on_project_first_start: command
